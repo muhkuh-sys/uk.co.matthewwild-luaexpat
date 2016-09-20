@@ -53,7 +53,7 @@ ENDIF(${CMAKE_BUILD_TOOL} MATCHES "(msdev|VCExpress|devenv)")
 
 ADD_SUBDIRECTORY(external)
 
-#ADD_SUBDIRECTORY(luaexpat)
+ADD_SUBDIRECTORY(luaexpat)
 
 
 #----------------------------------------------------------------------------
