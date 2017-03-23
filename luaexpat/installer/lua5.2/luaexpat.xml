@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jonchki-artifact version="1.0">
+	<info group="uk.co.matthewwild"
+	      module="luaexpat"
+	      artifact="lua5.2-luaexpat"
+	      version="@PROJECT_VERSION@"
+	      vcs-id="@PROJECT_VERSION_VCS@">
+		<license name="MIT"/>
+		<author name="The Kepler Project" url="http://matthewwild.co.uk/projects/luaexpat/" />
+		<description>
+			LuaExpat is a SAX XML parser based on the Expat library.
+		</description>
+	</info>
+	<build-dependencies>
+		<dependency group="org.lua" module="lua" artifact="lua5.2" version="5.2.4.1"/>
+	</build-dependencies>
+	<dependencies>
+		<dependency group="org.lua" module="lua" artifact="lua5.2"/>
+	</dependencies>
+</jonchki-artifact>
