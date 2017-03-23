@@ -9,6 +9,9 @@ ENABLE_TESTING()
 # Set some installation folders.
 INCLUDE(cmake/muhkuh_installation_folders.cmake)
 
+OPTION(BUILDCFG_ONLY_JONCHKI_CFG "Build only the jonchki configuration. This is used for the resolve phase. The default is OFF."
+       "OFF")
+
 
 #----------------------------------------------------------------------------
 #
@@ -16,15 +19,7 @@ INCLUDE(cmake/muhkuh_installation_folders.cmake)
 #
 
 # Python is used for some test scripts.
-FIND_PACKAGE(PythonInterp REQUIRED)
-
-# Include the location of the dependencies.
-INCLUDE(ivy/ant_paths.cmake OPTIONAL)
-
-# Select the LUA version.
-INCLUDE(cmake/muhkuh_lua.cmake)
-
-# TODO: Show a summary with FeatureSummary .
+FIND_PACKAGE(PythonInterp 2.7 REQUIRED)
 
 
 #----------------------------------------------------------------------------
@@ -48,11 +43,7 @@ ENDIF(${CMAKE_BUILD_TOOL} MATCHES "(msdev|VCExpress|devenv)")
 #----------------------------------------------------------------------------
 #
 # Include the projects in the subdirectories.
-# NOTE: build the external components first. Many parts depend on them.
 #
-
-ADD_SUBDIRECTORY(external)
-
 ADD_SUBDIRECTORY(luaexpat)
 
 
