@@ -12,10 +12,8 @@
 			LuaExpat is a SAX XML parser based on the Expat library.
 		</description>
 	</info>
-	<build-dependencies>
-		<dependency group="org.lua" module="lua" artifact="lua5.3" version="5.3.3.1"/>
-	</build-dependencies>
 	<dependencies>
+		<build-dependency group="org.lua" module="lua" artifact="lua5.3" version="5.3.3.1"/>
 		<dependency group="org.lua" module="lua" artifact="lua5.3"/>
 	</dependencies>
 </jonchki-artifact>
