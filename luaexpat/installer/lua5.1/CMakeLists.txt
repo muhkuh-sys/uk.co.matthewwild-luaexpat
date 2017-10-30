@@ -10,10 +10,10 @@ SET(INSTALL_UBUNTU_1404_X86    "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.
 SET(INSTALL_UBUNTU_1404_X86_64 "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1404_x86_64")
 SET(INSTALL_UBUNTU_1604_X86    "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1604_x86")
 SET(INSTALL_UBUNTU_1604_X86_64 "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1604_x86_64")
-SET(INSTALL_UBUNTU_1610_X86    "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1610_x86")
-SET(INSTALL_UBUNTU_1610_X86_64 "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1610_x86_64")
 SET(INSTALL_UBUNTU_1704_X86    "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1704_x86")
 SET(INSTALL_UBUNTU_1704_X86_64 "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1704_x86_64")
+SET(INSTALL_UBUNTU_1710_X86    "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1710_x86")
+SET(INSTALL_UBUNTU_1710_X86_64 "${CMAKE_CURRENT_SOURCE_DIR}/../../../build/lua5.1/ubuntu_1710_x86_64")
 
 # Get the project version. All installation folders should have the same.
 INCLUDE(${INSTALL_WINDOWS_X86}/uk.co.matthewwild-luaexpat.version)
@@ -68,18 +68,6 @@ INSTALL(FILES ${INSTALL_UBUNTU_1604_X86_64}/lua_plugins/lxp.so
 INSTALL(DIRECTORY ${INSTALL_UBUNTU_1604_X86_64}/lua/
         DESTINATION ubuntu_1604_x86_64/lua)
 
-# Ubuntu 16.10 32bit
-INSTALL(FILES ${INSTALL_UBUNTU_1610_X86}/lua_plugins/lxp.so
-        DESTINATION ubuntu_1610_x86/lua_plugins)
-INSTALL(DIRECTORY ${INSTALL_UBUNTU_1610_X86}/lua/
-        DESTINATION ubuntu_1610_x86/lua)
-
-# Ubuntu 16.10 64bit
-INSTALL(FILES ${INSTALL_UBUNTU_1610_X86_64}/lua_plugins/lxp.so
-        DESTINATION ubuntu_1610_x86_64/lua_plugins)
-INSTALL(DIRECTORY ${INSTALL_UBUNTU_1610_X86_64}/lua/
-        DESTINATION ubuntu_1610_x86_64/lua)
-
 # Ubuntu 17.04 32bit
 INSTALL(FILES ${INSTALL_UBUNTU_1704_X86}/lua_plugins/lxp.so
         DESTINATION ubuntu_1704_x86/lua_plugins)
@@ -91,6 +79,18 @@ INSTALL(FILES ${INSTALL_UBUNTU_1704_X86_64}/lua_plugins/lxp.so
         DESTINATION ubuntu_1704_x86_64/lua_plugins)
 INSTALL(DIRECTORY ${INSTALL_UBUNTU_1704_X86_64}/lua/
         DESTINATION ubuntu_1704_x86_64/lua)
+
+# Ubuntu 17.10 32bit
+INSTALL(FILES ${INSTALL_UBUNTU_1710_X86}/lua_plugins/lxp.so
+        DESTINATION ubuntu_1710_x86/lua_plugins)
+INSTALL(DIRECTORY ${INSTALL_UBUNTU_1710_X86}/lua/
+        DESTINATION ubuntu_1710_x86/lua)
+
+# Ubuntu 17.10 64bit
+INSTALL(FILES ${INSTALL_UBUNTU_1710_X86_64}/lua_plugins/lxp.so
+        DESTINATION ubuntu_1710_x86_64/lua_plugins)
+INSTALL(DIRECTORY ${INSTALL_UBUNTU_1710_X86_64}/lua/
+        DESTINATION ubuntu_1710_x86_64/lua)
 
 
 #-----------------------------------------------------------------------------

@@ -36,17 +36,6 @@ elseif strDistId=='ubuntu' then
       tResult = true
     end
 
-  elseif strDistVersion=='16.10' then
-    if strCpuArch=='x86' then
-      t:install('ubuntu_1610_x86/lua_plugins/lxp.so',      '${install_lua_cpath}/')
-      t:install('ubuntu_1610_x86/lua',                     '${install_lua_path}/')
-      tResult = true
-    elseif strCpuArch=='x86_64' then
-      t:install('ubuntu_1610_x86_64/lua_plugins/lxp.so',   '${install_lua_cpath}/')
-      t:install('ubuntu_1610_x86_64/lua',                  '${install_lua_path}/')
-      tResult = true
-    end
-
   elseif strDistVersion=='17.04' then
     if strCpuArch=='x86' then
       t:install('ubuntu_1704_x86/lua_plugins/lxp.so',      '${install_lua_cpath}/')
@@ -55,6 +44,17 @@ elseif strDistId=='ubuntu' then
     elseif strCpuArch=='x86_64' then
       t:install('ubuntu_1704_x86_64/lua_plugins/lxp.so',   '${install_lua_cpath}/')
       t:install('ubuntu_1704_x86_64/lua',                  '${install_lua_path}/')
+      tResult = true
+    end
+
+  elseif strDistVersion=='17.10' then
+    if strCpuArch=='x86' then
+      t:install('ubuntu_1710_x86/lua_plugins/lxp.so',      '${install_lua_cpath}/')
+      t:install('ubuntu_1710_x86/lua',                     '${install_lua_path}/')
+      tResult = true
+    elseif strCpuArch=='x86_64' then
+      t:install('ubuntu_1710_x86_64/lua_plugins/lxp.so',   '${install_lua_cpath}/')
+      t:install('ubuntu_1710_x86_64/lua',                  '${install_lua_path}/')
       tResult = true
     end
   end
