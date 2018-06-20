@@ -312,7 +312,14 @@ def download_to_file(strUrl, tFile):
     return bResult
 
 
-def __check_jonchki_version(strID, strLua, strPath, strTool, strVersion, strCmdFile):
+def __check_jonchki_version(
+    strID,
+    strLua,
+    strPath,
+    strTool,
+    strVersion,
+    strCmdFile
+):
     fFound = False
     if os.path.isdir(strPath) is not True:
         logging.info('The %s path does not exist.' % strID)
@@ -443,7 +450,10 @@ atArgs = tParser.parse_args()
 logging.basicConfig(level=logging.DEBUG)
 
 strCfg_OutputFolder = atArgs.strOutputFolder
-if 'JONCHKI_VERSION_OVERWRITE' in os.environ:
+if(
+    ('JONCHKI_VERSION_OVERWRITE' in os.environ) and
+    (len(os.environ['JONCHKI_VERSION_OVERWRITE']) > 0)
+):
     strCfg_JonchkiVersion = os.environ['JONCHKI_VERSION_OVERWRITE']
     logging.info(
         'Overwriting the jonchki version with the environment variable '
@@ -526,7 +536,10 @@ if (fFoundJonchki is not True) and (fFoundJonchkiLight is not True):
         '{ARCHIVE_EXTENSION}'
     )
     strLightLocalFileTemplate = 'jonchki-light-{JONCHKI_VERSION}.zip'
-    if 'JONCHKI_URL_OVERWRITE' in os.environ:
+    if(
+        ('JONCHKI_URL_OVERWRITE' in os.environ) and
+        (len(os.environ['JONCHKI_URL_OVERWRITE']) > 0)
+    ):
         strUrlTemplate = os.environ['JONCHKI_URL_OVERWRITE']
         logging.info(
             'Overwriting the jonchki URL template with the environment '
@@ -539,7 +552,10 @@ if (fFoundJonchki is not True) and (fFoundJonchkiLight is not True):
             '{HOST_DISTRIBUTION_ID}{HOST_DISTRIBUTION_VERSION}_'
             '{HOST_CPU_ARCHITECTURE}.{ARCHIVE_EXTENSION}'
         )
-    if 'JONCHKI_LIGHT_URL_OVERWRITE' in os.environ:
+    if(
+        ('JONCHKI_LIGHT_URL_OVERWRITE' in os.environ) and
+        (len(os.environ['JONCHKI_LIGHT_URL_OVERWRITE']) > 0)
+    ):
         strLightUrlTemplate = os.environ['JONCHKI_LIGHT_URL_OVERWRITE']
         logging.info(
             'Overwriting the jonchki-light URL template with the environment '
