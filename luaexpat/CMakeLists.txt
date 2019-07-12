@@ -125,7 +125,7 @@ IF((${BUILDCFG_ONLY_JONCHKI_CFG} STREQUAL "OFF"))
 	#
 	# Filter the pom.xml file.
 	#
-	SET(POM_ARTIFACT_ID  "luaexpat")
+	SET(POM_ARTIFACT_ID  "lua${BUILDCFG_LUA_VERSION}-luaexpat")
 	SET(POM_GROUP_ID     "uk.co.matthewwild")
 	SET(POM_VERSION      "${PROJECT_VERSION}")
 	SET(POM_PACKAGING    "tar.xz")
