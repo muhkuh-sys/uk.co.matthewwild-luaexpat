@@ -5,7 +5,7 @@ PROJECT("luaexpat")
 INCLUDE(ExternalProject)
 
 SET(VERSION_EXTERNAL "1.3.0")
-SET(VERSION_PACKAGE  "4")
+SET(VERSION_PACKAGE  "5")
 SET(PROJECT_VERSION  "${VERSION_EXTERNAL}.${VERSION_PACKAGE}")
 
 # Get the VCS version for the jonchki configuration.
